@@ -759,7 +759,7 @@ function App() {
     fire({ kind: "xp", icon: "⚔", title: t.toasts.download.title, msg: t.toasts.download.msg });
 
     try {
-      const res = await fetch("https://api.github.com/repos/facundocapua/hubtify/releases/latest");
+      const res = await fetch("https://api.github.com/repos/facuga7van/hubtify/releases/latest");
       const release = await res.json();
       const exe = release.assets.find((a) => a.name.endsWith(".exe"));
       if (exe) window.location.href = exe.browser_download_url;
